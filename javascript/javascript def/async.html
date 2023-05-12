@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- async makes a function return a Promise
+await makes a function wait for a Promise -->
+<!-- Async: It simply allows us to write promises-based code as
+ if it was synchronous and it checks that we are not breaking the execution thread. It operates asynchronously via the event loop.
+ Async functions will always return a value. It makes sure that a promise is returned and if it is not returned then 
+ JavaScript automatically wraps it in a promise which is resolved with its value.
+ Await: Await function is used to wait for the promise. It could be used within the async block only. 
+ It makes the code wait until the promise returns a result. It only makes the async block wait. -->
+
+ <script>
+//     async function f() {
+
+// let promise=new Promise(function(resolve,reject){
+//     setTimeout(function() {
+//         resolve("done !!");}, 1000);
+// })
+
+// let result = await promise; // wait until the promise resolves (*)
+
+// alert(result); // "done!"
+
+// }
+
+// f();
+
+
+async function fun(){
+    console.log("hi")
+let a=await fetch("https://dummyjson.com/products")
+console.log("hello")
+try{
+    let b=await a.json()
+console.log(b.products)
+}
+catch(err){
+console.log(err.message);
+}
+}
+
+fun();
+
+ </script>
+</body>
+</html>

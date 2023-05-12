@@ -1,0 +1,24 @@
+<p>template works!</p>
+<div fxLayoutAlign="center center">
+    <div fxFlex="40">
+<form  (submit)="handleSubmit()">
+    <mat-form-field fxFlexFill>
+      <mat-label>name</mat-label>
+      <input matInput placeholder="Enter name" [(ngModel)]="name" name="name">
+      <!-- <mat-error *ngIf="!name">enter name</mat-error> -->
+    </mat-form-field>
+    <p *ngIf="!name">enter name</p>
+    <p *ngIf="name && name.length<3">min 3</p>
+    <p *ngIf="name && name.length>5">max 5</p>
+    <mat-form-field fxFlexFill>
+        <mat-label>pwd</mat-label>
+        <input matInput placeholder="Enter pwd"[(ngModel)]="pwd" name="pwd" >
+       <mat-error *ngIf="!pwd">enter pwd</mat-error>
+       
+      </mat-form-field>
+      <!-- <p *ngIf="!pwd">enter pwd</p> -->
+
+      <button mat-raised-button color="accent">Submit</button>
+  </form>
+</div>
+</div>

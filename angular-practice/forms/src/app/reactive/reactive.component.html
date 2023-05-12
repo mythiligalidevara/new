@@ -1,0 +1,28 @@
+<p>Reactive form</p>
+
+<div fxLayoutAlign="center center" style="margin-top: 10px;" >
+    <div fxFlex="40">
+<form [formGroup]="signup" (submit)="handlesubmit(signup.value)">
+    <mat-form-field appearance="fill" fxFlexFill>
+      <mat-label>Enter username</mat-label>
+      <input matInput placeholder="Placeholder" formControlName="uname">
+      <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      <mat-hint>Hint</mat-hint> -->
+      <mat-error *ngIf="signup.get('uname')?.errors?.['required']">enter uname</mat-error>
+      <mat-error *ngIf="signup.get('uname')?.errors?.['minlength']">min is 3</mat-error>
+      <mat-error *ngIf="signup.get('uname')?.errors?.['maxlength']">max is 5</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" fxFlexFill>
+      <mat-label>Enter password</mat-label>
+      <input matInput placeholder="Placeholder" formControlName="pwd">
+      <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      <mat-hint>Hint</mat-hint> -->
+      <mat-error *ngIf="signup.get('pwd')?.errors?.['required']">enter pwd</mat-error>
+    </mat-form-field>
+
+
+<button mat-raised-button color="accent">Submit</button>
+</form>
+</div>
+</div>

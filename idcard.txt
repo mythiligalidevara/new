@@ -1,0 +1,131 @@
+
+<div fxLayoutAlign="center center" class="idcardc" style="margin-top: 30px;">
+    <div fxFlex="20" class="printme">
+        <div id="demo">
+<mat-card class="example-card" id="demo" style="background-color: aliceblue;
+">
+    <mat-card-header class="triangles">
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title ><h1 style="font-weight: bold;color: orange;margin-left: -20px;"><span><img src="{{person.logo}} " style="width: 30px;border-radius: 50%;padding-top: 4px;margin-right: 5px;"/></span>{{person.cname | uppercase}}</h1></mat-card-title>
+      <mat-card-subtitle style="margin-left: 10px;color: orange;" >{{person.tag}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{person.imagesource}}" alt="Photo of a Shiba Inu" class="imagecls" style="border-radius: 50%;width: 50%;
+    margin-left: 80px;
+    margin-top: 10px;">
+    <mat-card-content>
+        <h2 class="empname" style=" margin-left: 60px;border: 1px solid orange;border-right-width: 1px;margin-right: 40px;background-color: orange;margin-top: 10px;">{{person.uname}}</h2>
+      <h3 class="empid" style="margin-left: 60px;">Employee ID:
+        {{person.id}}
+      </h3>
+      <h3 class="websitename" style=" margin-left: 60px;font-weight:bold ;">{{person.website}}</h3>
+   
+    </mat-card-content>
+   
+  </mat-card>
+  <!-- <div>
+    Name: <input ng-model="name">   
+    <h1>You entered: {{name}}</h1>
+  </div> -->
+</div>
+  <div class="dontprint">
+    
+<form ng-app="" name="myForm" class="myForm">
+    
+    <!-- <input type="text" name="myAddress" ng-model="person.name"> -->
+    <div class="fields">
+  <div>
+   <label for="company" >Company Name:</label>
+   <input type="text" name="company" id="company" placeholder="Company name" [(ngModel)]="person.cname"/>
+</div>
+<div style="margin-top: 10px;">
+    <label for="tagname" >Tag Name:</label>
+    <input type="text" name="tagname" id="tagname" placeholder="Tag name" [(ngModel)]="person.tag"/>
+</div>
+
+<div style="margin-top: 10px;">
+    <label for="empname" >Tag Name:</label>
+    <input type="text" name="empname" id="empname" placeholder="Employee name" [(ngModel)]="person.uname"/>
+</div>
+
+<div style="margin-top: 10px;">
+    <label for="empid" >Employee Id:</label>
+    <input type="text" name="empid" id="empid" placeholder="Employee Id" [(ngModel)]="person.id"/>
+</div>
+
+<div style="margin-top: 10px;">
+    <label for="empweb" >Employee Website:</label>
+    <input type="text" name="empweb" id="empweb" placeholder="Employee Website" [(ngModel)]="person.website"/>
+</div>
+
+<div style="margin-top: 10px;margin-bottom: 20px;">
+    <label for="empimg" >Image Source:</label>
+    <input type="text" name="empimg" id="empimg" placeholder="Employee Image URL" [(ngModel)]="person.imagesource"/>
+</div>
+
+</div>
+</form>
+  </div>
+  <div class="dont">
+  <button printSectionId="demo" [useExistingCss]="true" ngxPrint style="margin-left: 100px;color: blue;">print</button>
+  <!-- <button ng-click="printToCart('demo')" class="button">Print</button> -->
+  <button (click)="printPage()"  style="margin-left: 100px;color: blue;">print</button>
+</div>
+</div>
+</div>
+
+
+
+
+
+.idcardc{
+    margin-top: 30px;
+
+}
+.imagecls{
+    border-radius: 50%;
+    width: 30%;
+    margin-left: 70px;
+    margin-top: 10px;
+}
+.empname,.websitename{
+    margin-left: 50px;
+}
+.empid{
+    margin-left: 100px;
+}
+.websitename{
+    font-weight:bold ;
+}
+.myForm{
+    margin-top:50px;
+    // margin-left: 15px;
+
+}
+.fields{
+    margin-top: 30px;
+}
+
+@media print {
+	.dontprint  {
+		display: none;
+	}
+	.printme  {
+		display: block;
+	}
+    .dont{
+        display: none;
+    }
+}
+
+.idcard{
+    display: inline-block;
+    // vertical-align: middle;
+   
+  
+}
+
+.dontprint{
+    background-color: yellowgreen;
+    float: left;
+    
+}

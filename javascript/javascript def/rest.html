@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- The rest parameter syntax allows us to represent an indefinite number of arguments as an array. 
+    With the help of a rest parameter, a function can be called with any number of arguments, no matter how it was defined -->
+    <script>
+    // Without rest parameter
+    function fun(a, b){
+        return a + b;
+    }
+    console.log(fun(1, 2)); // 3
+    console.log(fun(1, 2, 3, 4, 5)); //3
+
+    // In the above code, no error will be thrown even when we are passing arguments more than the parameters, but only the first two arguments will be evaluated. It’s different in the case of the rest parameter. 
+    // With the use of the rest parameter, we can gather any number of arguments into an array and do what we want with them. 
+
+    //with rest paarameter
+    function fun(...input){
+        let sum = 0;
+        for(let i of input){
+            sum+=i;
+        }
+        return sum;
+    }
+    console.log(fun(1,2)); //3
+    console.log(fun(1,2,3)); //6
+    console.log(fun(1,2,3,4,5)); //15 
+
+
+    
+    
+    // The rest parameter has to be the last argument, as its job is to collect all the remaining arguments into an array
+//     Rest Parameter is collecting all remaining elements into an array .
+// Spread Operator is unpacking collected elements such as arrays into single elements
+</script>
+</body>
+</html>

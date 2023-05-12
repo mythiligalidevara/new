@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div >
+    <p id="lor">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni minima saepe, magnam recusandae similique at ea obcaecati, officia, architecto assumenda quae! Quo iste nihil laboriosam aliquid quas maiores id magni?</p>
+    <button class="clicker">Hide</button>
+    </div>
+    <script>
+      const content1=document.getElementById("lor");
+      const toggleBtn=document.querySelector(".clicker");
+      let content1IsVisible=true;
+      toggleBtn.addEventListener("click",function(){
+        if(content1IsVisible){
+            content1.style.display="none";
+            content1IsVisible=false;
+            toggleBtn.textContent="Show"; 
+        }
+        else{
+            content1.style.display="block";
+            content1IsVisible=true;
+            toggleBtn.textContent="Hide"; 
+        }
+      }
+      );
+    </script>
+</body>
+</html>

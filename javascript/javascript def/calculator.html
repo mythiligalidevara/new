@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+     
+.body{
+    width:33%
+}
+
+button{
+    width:25%;
+    height:36px;
+    font-size:18px;
+    margin:0px;
+    float:left
+}
+
+#res{
+    background-color:lightgray;
+    border-style:solid;
+    height:48px;
+    font-size:20px    
+}
+
+#btn0,#btn1{
+    background-color:lightgreen;
+        color:brown;
+    
+}
+
+#btnClr,#btnEql{
+    background-color:darkgreen;
+        color:white
+}
+
+#btnSum,#btnSub,#btnMul,#btnDiv{
+    
+    background-color:black;
+        color:red
+}
+
+
+
+
+</style>
+
+</head>
+<body>
+
+    <div id="res"></div>    
+    <div id="btns">
+        <button id="btn0">0</button>
+        <button id="btn1" >1</button>
+        <button id="btnClr">C</button>
+        <button id="btnEql">=</button>
+        
+        <button id="btnSum">+</button>
+        <button id="btnSub">-</button>
+        <button id="btnMul">*</button>
+        <button id="btnDiv">/</button>
+    </div> 
+
+
+
+
+    <script>
+       document.getElementById('btn1').onclick = function() {
+                document.getElementById('res').innerHTML+=1;
+            };
+
+document.getElementById("btn0").onclick=function(){
+    document.getElementById("res").innerHTML+=0;
+}
+
+document.getElementById("btnSum").onclick=function(){
+    document.getElementById("res").innerHTML+= "+";
+}
+
+document.getElementById("btnSub").onclick=function(){
+    document.getElementById("res").innerHTML+= "-";
+}
+
+document.getElementById("btnMul").onclick=function(){
+    document.getElementById("res").innerHTML+= "*";
+}
+
+document.getElementById("btnDiv").onclick=function(){
+   document.getElementById("res").innerHTML+= "/";
+}
+
+document.getElementById("btnClr").onclick=function(){
+    document.getElementById("res").innerHTML=null
+}
+
+document.getElementById("btnEql").onclick=function(){
+    document.getElementById("res").innerHTML= Math.trunc(eval(document.getElementById("res").innerHTML));
+}
+    </script>
+</body>
+</html>

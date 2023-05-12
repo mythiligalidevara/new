@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+    <title>Document</title>
+    <style>
+        .container {
+            width: 100%;
+            margin-top: 100px;
+        }
+
+        .lists {
+            counter-reset: section;
+        }
+
+        .lists li {
+            list-style-type: none;
+            float: left;
+            width: 25%;
+            position: relative;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .lists li:before {
+           
+            content: counter(section);
+            counter-increment: section;
+            height: 30px;
+            width: 30px;
+            line-height: 30px;
+            border: 2px solid #ddd;
+            display: block;
+            text-align: center;
+            margin: 0 auto 10px auto;
+            border-radius: 50%;
+            background-color: white;
+        }
+
+        .lists li:after {
+           
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: #ddd;
+            top: 15px;
+            left: -50%;
+            z-index: -1;
+        }
+
+        .lists li:first-child:after {
+            content: none;
+        }
+
+        .lists li.active {
+            color: green;
+        }
+
+        .lists li.active:before {
+            border-color: green;
+        }
+
+        .lists li.active+li:after {
+            background-color: green;
+        }
+
+
+
+        input[type=text] {
+            border: none;
+            border-bottom: 2px solid black;
+            width: 706px;
+            margin-left: 321px;
+            margin-bottom: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body style="background-color: aliceblue;">
+    <div class="container">
+        <h2 style="text-align: center;margin-bottom: 30px;">Sign Up Your User Account</h2>
+        <h5 style="text-align: center;margin-bottom: 30px;color: grey;">Fill all form fields to go to next step</h5>
+        <ul class="lists">
+
+            <li class="active">Account</li>
+            <li>Personal</li>
+            <li>Payment</li>
+            <li>Final</li>
+        </ul>
+    
+    <div>
+        <!-- <h4 style="margin-left: 210px;margin-top: 10px;">Account information</h4> -->
+        <form class="form1" >
+
+            <div>
+                <input type="text" placeholder="Email id">
+            </div>
+            <div>
+                <input type="text" placeholder="Username">
+            </div>
+            <div>
+                <input type="text" placeholder="Password">
+            </div>
+            <div>
+                <input type="text" placeholder="Confirm Password">
+            </div>
+        </form>
+
+    </div>
+</div>
+
+</body>
+
+</html>

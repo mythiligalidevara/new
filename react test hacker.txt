@@ -1,0 +1,84 @@
+import React from 'react';
+import {useState} from "react";
+function Slides({slides}) {
+  //=========
+//  const slider=slides;
+//  console.log(slider[0]);
+//  const [slide,setSlide]=useState(slider[0])
+// let [count,setCount]=useState(0)
+//  return (
+//         <div>
+//             <div id="navigation" className="text-center">
+//               {/* className="small outlined" */}
+//                 <button data-testid="button-restart"  className={count === 0 ? "small outlined" : "small"} disabled={count === 0} onClick={()=>setSlide(slider[0])}>Restart</button>
+//                 <button data-testid="button-prev" className={count === 0 ? "small outlined" : "small"} disabled={count === 0} onClick={()=>{setCount(count-1);setSlide(slider[count-1])}}>Prev</button>
+//                 <button data-testid="button-next" className={count === slides.length - 1 ? "small outlined" : "small"} disabled={count === slides.length - 1} onClick={()=>{setCount(count+1);setSlide(slider[count]);console.log(count);}}>Next</button>
+//             </div>
+//             <div id="slide" className="card text-center">
+//                 <h1 data-testid="title">{slide.title}</h1>
+//                 <p data-testid="text">{slide.text}</p>
+//             </div>
+//         </div>
+//     );
+
+// }
+
+// export default Slides;
+
+    const [currentSlide, setSlide] = useState(0)
+    return (
+        <div>
+            <div id="navigation" className="text-center">
+                <button
+                    data-testid="button-restart"
+                    className={currentSlide === 0 ? "small outlined" : "small"}
+                    disabled={currentSlide === 0}
+                    onClick={() => setSlide(0)}
+                >
+                    Restart
+                </button>
+                <button
+                    data-testid="button-prev"
+                    className={currentSlide === 0 ? "small outlined" : "small"}
+                    disabled={currentSlide === 0}
+                    onClick={() => setSlide(currentSlide - 1)}
+                >
+                    Prev
+                </button>
+                <button
+                    data-testid="button-next"
+                    className={currentSlide === slides.length - 1 ? "small outlined" : "small"}
+                    disabled={currentSlide === slides.length - 1}
+                    onClick={() => setSlide(currentSlide + 1)}
+                >
+                    Next
+                </button>
+            </div>
+            <div id="slide" className="card text-center">
+                <h1 data-testid="title">{slides[currentSlide].title}</h1>
+                <p data-testid="text">{slides[currentSlide].text}</p>
+            </div>
+        </div>
+    );
+
+}
+
+export default Slides;
+// ========
+    // return (
+    //     <div>
+    //         <div id="navigation" className="text-center">
+    //             <button data-testid="button-restart" className="small outlined" >Restart</button>
+    //             <button data-testid="button-prev" className="small">Prev</button>
+    //             <button data-testid="button-next" className="small">Next</button>
+    //         </div>
+    //         <div id="slide" className="card text-center">
+    //             <h1 data-testid="title">{slides[0].title}</h1>
+    //             <p data-testid="text">{slides[0].text}</p>
+    //         </div>
+    //     </div>
+    // );
+
+// }
+
+//export default Slides;

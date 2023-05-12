@@ -1,0 +1,9 @@
+<p>parent works!</p>
+<button (click)="chococount()">send chocolates to child</button>
+<P>message from child:{{thankstext}} </P>   
+<app-child [chocolates]="choco" (thanks)="saythanks($event)"></app-child>
+
+
+
+
+ 

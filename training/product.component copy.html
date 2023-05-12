@@ -1,0 +1,52 @@
+<div fxLayout="row" fxLayoutAlign="center center" fxFlex="80" >
+<h4>Create product</h4>
+
+  
+
+
+
+
+
+ <!-- <form>
+    <input type="text" name="ttle" [(ngModel)]="title">
+    <p>Entered Title={{title}}</p>
+    <p *ngIf="!title">title can not be empty</p>
+    <p *ngIf="title && title.length<3">title should be min 3 chars</p>
+    <p *ngIf="title && title.length>5">title can not exceed 5 chars</p>
+
+</form>   -->
+<!-- above is defing validation on html itself.traditional way  -->
+
+<!-- above is js way
+<form>
+    <input type="text" name="ttle" [(ngModel)]="title">
+    <p>Entered Title={{title}}</p>
+    <p>{{validTitle}}</p>
+</form>
+above is ts way -->
+
+
+<!-- <form [formGroup]="productForm" (submit)="onSubmit($event)">
+    <div>
+        <input type="text" formControlName="title" >  
+         [formControl]="title" (keyup)="onTitleKeyUp()" 
+    </div>
+    <div>
+        Enter title={{productForm.get("title")?.value }}
+    </div>
+    <P *ngIf="productForm.get('title')?.errors?.['required']">title is required</P>
+    <P *ngIf="productForm.get('title')?.errors?.['minlength']">title min 3 chars</P>
+    <P *ngIf="productForm.get('title')?.errors?.['maxlength']">title max 5 chars</P>
+
+    <div>
+        <input type="text" formControlName="price" >  
+    </div>
+    <div>
+        Enter price={{productForm.get("price")?.value }}
+    </div>
+    <P *ngIf="productForm.get('price')?.errors?.['required']">price is required</P>
+     <P *ngIf="productForm.get('price')?.errors?.['pattern']">price is invalid</P>
+<button type="submit" [disabled]="productForm.invalid">Submit</button>
+above is reactive form where we can control code from js
+</form>   -->
+</div>

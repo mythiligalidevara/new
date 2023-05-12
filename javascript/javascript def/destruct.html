@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- Destructuring is a JavaScript expression that makes it possible to unpack values from arrays, or properties from objects,
+ into distinct variables -->
+
+ 
+
+
+<script>
+// array Destructuring
+<!-- previous -->
+//let introduction = ["Hello", "I" , "am", "Sarah"];
+// let greeting = introduction[0];
+// let name = introduction[3];
+
+// console.log(greeting);//"Hello"
+// console.log(name);//"Sarah"
+
+let introduction = ["Hello", "I" , "am", "Sarah"];
+let [greeting, pronoun] = introduction;
+console.log(greeting);//"Hello"
+console.log(pronoun);//"I"
+
+//object destructuring
+let person = {name: "Sarah", country: "Nigeria", job: "Developer"};
+
+let {name, country, job} = person;
+
+console.log(name);//"Sarah"
+console.log(country);//"Nigeria"
+console.log(job);//Developer"
+</script>
+</body>
+</html>

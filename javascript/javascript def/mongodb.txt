@@ -1,0 +1,127 @@
+MongoDB is a schema-less NoSQL document database.
+MongoDB has standalone, replica-set and sharded clusters. These configurations serve different purposes.
+
+A standalone is a single server where all the databases (and their collections) are stored. 
+In case the server goes down, your application and its users will wait until the server is again up and running.
+
+A replica-set has the feature that the data is replicated on multiple databases servers. 
+So, the advantage is if one of the servers die, other servers with their replicated data will go on serving the application and its users.
+
+A sharded cluster has multiple shards - each shard is a replica-set - and the application’s data is 
+distributed among these shards. For example, the customer data is stored on multiple shards.
+ If there are five shards, and there are one hundred customers, you can think that each shard stores about twenty customer 
+ data (actual distribution is done based on criteria like shard key).
+
+MongoDB has sharding at collection level, and a sharded cluster can have sharded and un-sharded data.
+collections:different containers for different ingredients serving different purposes.
+
+
+
+
+
+
+
+MongoDB is a document database. It stores data in a type of JSON format called BSON.
+A record in MongoDB is a document, which is a data structure composed of key value pairs similar to the structure of JSON objects.
+A MongoDB Document
+Records in a MongoDB database are called documents, and the field values may include numbers, strings, booleans, arrays, or even nested documents.
+Example Document:-
+{
+	title: "Post Title 1",
+	body: "Body of post.",
+	category: "News",
+	likes: 1,
+	tags: ["news", "events"],
+	date: Date()
+}
+MongoDB is a document database and can be installed locally or hosted in the cloud.
+MongoDB is a document database which is often referred to as a non-relational database. 
+This does not mean that relational data cannot be stored in document databases. 
+It means that relational data is stored differently. A better way to refer to it is as a non-tabular database.
+
+MongoDB stores data in flexible documents. Instead of having multiple tables you can simply keep all of your related data together. 
+This makes reading your data very fast.
+
+1.Create a new database called "blog":
+use blog
+2.Create Collection
+-->db.createCollection("posts")
+-->db.posts.insertOne(object)
+
+3.Insert Documents
+There are 2 methods to insert documents into a MongoDB database.
+a)insertOne()
+To insert a single document, use the insertOne() method.
+-->db.posts.insertOne({
+  title: "Post Title 1",
+  body: "Body of post.",
+  category: "News",
+  likes: 1,
+  tags: ["news", "events"],
+  date: Date()
+})
+b)insertMany()
+To insert multiple documents at once, use the insertMany() method.
+This method inserts an array of objects into the database.
+-->db.posts.insertMany([  
+  {
+    title: "Post Title 2",
+    body: "Body of post.",
+    category: "Event",
+    likes: 2,
+    tags: ["news", "events"],
+    date: Date()
+  },
+  {
+    title: "Post Title 3",
+    body: "Body of post.",
+    category: "Technology",
+    likes: 3,
+    tags: ["news", "events"],
+    date: Date()
+  },
+  {
+    title: "Post Title 4",
+    body: "Body of post.",
+    category: "Event",
+    likes: 4,
+    tags: ["news", "events"],
+    date: Date()
+  }
+])
+
+4.Find Data
+There are 2 methods to find and select data from a MongoDB collection, find() and findOne()
+a)find()
+To select data from a collection in MongoDB, we can use the find() method.
+This method accepts a query object. If left empty, all documents will be returned.
+-->db.posts.find()
+b)findOne()
+To select only one document, we can use the findOne() method.
+This method accepts a query object. If left empty, it will return the first document it finds.
+Note: This method only returns the first match it finds.
+Example
+-->db.posts.findOne()
+
+5)Update Document
+To update an existing document we can use the updateOne() or updateMany() methods.
+The first parameter is a query object to define which document or documents should be updated.
+The second parameter is an object defining the updated data.
+a)updateOne()
+The updateOne() method will update the first document that is found matching the provided query.
+-->db.posts.updateOne( { title: "Post Title 1" }, { $set: { likes: 2 } } ) 
+b)updateMany()
+The updateMany() method will update all documents that match the provided query.
+Example:
+Update likes on all documents by 1. For this we will use the $inc (increment) operator:
+-->db.posts.updateMany({}, { $inc: { likes: 1 } })
+
+6)Delete Documents
+We can delete documents by using the methods deleteOne() or deleteMany().
+These methods accept a query object. The matching documents will be deleted.
+a)deleteOne()
+The deleteOne() method will delete the first document that matches the query provided.
+-->db.posts.deleteOne({ title: "Post Title 5" })
+b)deleteMany()
+The deleteMany() method will delete all documents that match the query provided.
+-->db.posts.deleteMany({ category: "Technology" })00

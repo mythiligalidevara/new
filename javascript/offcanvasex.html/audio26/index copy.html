@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css" class="src">
+    <style>
+      .footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: coral;
+   color: white;
+   text-align: center;
+}
+    </style>
+</head>
+<body>
+  <h2 style="text-align:center; background-color: coral;">Audio elements</h2>
+  <div class="flex-container" style="display: flex; padding-top:6%; padding-left:10%; ">
+    <div>
+      <img src="brahma.jfif" alt="image" style="width:60%;height:80%;">
+      <h4>Brahmastra-Kesariya</h4>
+      
+      <audio id="myaudio1">
+        <source src="kesariya.mp3" type="audio/ogg"  >
+        
+      Your browser does not support the audio element.
+      </audio>
+      <button onclick="play1()" type="button">Play audio</button>
+      <button onclick="pause1()" type="button">Pause audio</button><br>
+    </div>
+    <div>
+      <img src="sitaramam.webp" alt="image" style="width:60%;height:80%;" >
+      <h4>Sita Ramam-oh sita</h4>
+      <audio id="myaudio2">
+        <source src="ohsita.mp3" type="audio/ogg">
+        
+      Your browser does not support the audio element.
+      </audio>
+      <button onclick="play2()" type="button">Play audio</button>
+      <button onclick="pause2()" type="button">Pause audio</button><br>
+    </div>
+    <div>
+     
+      <img src="karthi.jpg" alt="Card image" style="width: 60%;height:80%; ">
+      <h4>Karthikeya-Saripovu</h4>
+      <audio id="myaudio3">
+        <source src="Saripovu.mp3" type="audio/ogg">
+        
+      Your browser does not support the audio element.
+      </audio>
+      <button onclick="play3()" type="button">Play audio</button>
+      <button onclick="pause3()" type="button">Pause audio</button</p>
+     
+      </div>
+</div>
+
+
+
+ 
+         <script> 
+              var aud1 = document.getElementById("myaudio1"); 
+              
+              function play1() { 
+                aud1.play(); 
+              } 
+              
+              function pause1() { 
+                aud1.pause(); 
+              } 
+              var aud2 = document.getElementById("myaudio2"); 
+              
+              function play2() { 
+                aud2.play(); 
+              } 
+              
+              function pause2() { 
+                aud2.pause(); 
+              }
+               var aud3 = document.getElementById("myaudio3"); 
+              
+              function play3() { 
+                aud3.play(); 
+              } 
+              
+              function pause3() { 
+                aud3.pause(); 
+              } 
+              
+              const tracks = Array.from(document.querySelectorAll('audio'));
+
+              tracks.forEach(function(track) {
+              track.addEventListener('play', (event) => {
+              tracks.forEach(function(track) {
+              if(track !== event.target) 
+              track.pause();
+              event.target.play();
+              
+              })
+              })
+              })
+              </script> 
+
+<div class="footer">
+  
+  <p style="text-center text-black">copyright<sup>&copy;</sup> your website 2022</p>
+
+</div>
+</body>
+</html>

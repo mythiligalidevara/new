@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* * {
+          box-sizing: border-box;
+        }
+        
+        body {
+          margin: 0;
+        }
+        .column {
+  float: left;
+  width: 50%;
+    padding: 15px; 
+} 
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  
+} */
+.row{
+    display: inline-block;
+}
+img{
+    position: relative;
+    left: 350px;
+    top: 60px;
+}
+/* form{
+    position: absolute;
+   right: 530px;
+   top: 50px;
+} */
+form{
+    position: relative;
+    right:-713px;
+    top: -351px;
+}
+
+@media screen and (max-width:600px) {
+  .column1{
+    width: 100%;
+  }
+  .column2{
+    width: 100%;
+  }
+}
+</style>        
+</head>
+<body style="background-color: cadetblue;">
+    <div class="row">
+        <div class="column1" >
+          <img src="p1.jpg" alt="photographer" >  
+        </div>
+        <div class="column2">
+    <form action="/action_page.php">
+        <fieldset style="background-color:silver;">
+        <h2>Registration Form</h2>
+        <!-- <h3>Click for your shoot</h3> -->
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="gender">Gender</label>
+        <input type="radio" name="gender" value="male"> Male 
+        <input type="radio" name="gender" value="female"> Female<br><br>
+        <label for="birthday">Date of Birth:</label>
+        <input type="date" id="birthday" name="birthday"><br><br>
+        <label for="city">City:</label>
+        <select id="city" name="city">
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Rajahmundry">Rajahmundry</option>
+            <option value="Bangalore">Bangalore</option>
+        </select><br><br>
+        <input type="checkbox" id="country" name="country" value="India">
+  <label for="country"> India</label><br>
+  <input type="checkbox" id="country2" name="country2" value="Pak">
+  <label for="country2"> Pakistan</label><br>
+  <input type="checkbox" id="country3" name="country3" value="China">
+  <label for="country3"> China</label><br><br>
+        <input type="submit" value="Submit">
+    </fieldset>
+      </form>
+    </div>
+</div>
+</body>
+</html>

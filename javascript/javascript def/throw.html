@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  
+    <!-- <input type="text" id="demo1" />
+    <button type="button" onclick="fun()">Test</button>
+    <p id="demo"></p>
+
+
+
+    <script>
+        function fun(){
+        let x=document.getElementById("demo")
+        x.innerHTML=""
+        let y=document.getElementById("demo1").value
+        
+        try{
+            if(y ==""){
+                throw "text field is empty";
+            }
+            if(y>5){
+                throw "greater than 5";
+            }
+            if(y<5){
+                throw "less than 5"
+            }
+        }
+        catch(err){
+           // console.log(err.message);
+           y.innerHTML = "Input " + err;
+        }
+    } 
+    </script>-->
+
+    <input id="demo" type="text">
+<button type="button" onclick="myFunction()">Test Input</button>
+<p id="message"></p>
+
+<script>
+function myFunction() {
+  const message = document.getElementById("message");
+  message.innerHTML = "";
+  let x = document.getElementById("demo").value;
+  try { 
+    if(x == "")  throw new Error("is Empty");
+    if(isNaN(x)) throw new Error("not a number");
+    if(x > 10)   throw new Error("too high");
+    if(x < 5)  throw new Error("too low");
+  }
+  catch(err) {
+    message.innerHTML = "Input " + err;
+  }
+}
+</script>
+</body>
+</html>

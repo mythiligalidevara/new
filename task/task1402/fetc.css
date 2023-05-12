@@ -1,0 +1,13 @@
+img{
+    width: 100px;
+    height: 100px;
+  }
+   tr:nth-child(odd){
+    background-color:aquamarine;
+  } 
+
+  td{
+   border: 1px solid black;
+   text-align: center;
+  }
+  

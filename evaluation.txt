@@ -1,0 +1,36 @@
+sdlc,mysql,agile,git(git init,pull,push,commit,pr...)
+html,html5,css,bootstrap,flexbox
+grid&saas-not included
+
+jan 30th-internal eva
+feb9th-delivery team evaluation
+
+
+
+evaluation-2:-09/02/2023
+
+
+sdlc,git,html,css,bootstrap,flexbox,saas,grid,js,scs,
+api request methods,postman,mongoDB,
+
+
+git,html,css,bootstrap,flexbox,js,api request methods,postman,mongoDB,
+
+delivery:feb 17th
+
+
+
+
+sdlc,git,html,css,bootstrap,flexbox,saas,grid,js,scs,
+api request methods,postman,mongoDB,status codes,DOM
+
+communication,sdlc,tools(git,postman,mongodb),dom,html,css,bootstrap,js,flexbox
+
+
+final:may 10th to 15th
+next,vue also,node,express
+
+
+
+
+

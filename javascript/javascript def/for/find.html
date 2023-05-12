@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- The find() method returns the value of the first element that passes a test.
+
+The find() method executes a function for each array element.
+
+The find() method returns undefined if no elements are found.
+
+The find() method does not execute the function for empty elements.
+
+The find() method does not change the original array. -->
+<!-- Find the value of the first element with a value over 18: -->
+
+<p id="demo"></p>
+
+<script>
+const ages = [3, 10, 18, 20];
+
+document.getElementById("demo").innerHTML = ages.find(checkAge);
+
+function checkAge(age) {
+  return age > 18;
+}
+</script>
+
+</body>
+</html>

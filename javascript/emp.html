@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let employees = [ {"id": 1121,"name":"yx","salary":75000 }, {"id": 1235,"name":"zy","salary":62000 },{"id": 3026,"name":"zx", "salary":32000 }]
+        console.log(employees);
+        //for
+        /*for(let i=0;i<3;i++){  
+             console.log(employees[i].id);
+        }*/
+
+
+            //foreach
+           /* employees.forEach(function(employees){
+                console.log(employees.id)
+            })*/
+        
+
+        //filter
+       /* const filt=[];
+        for(let i=0;i<employees.length;i++){
+
+                filt.push(employees[i].id);
+        }
+        console.log(filt);*/
+
+        
+        //map
+        const mapped=employees.map(function(employees){
+            return `${employees.id}`
+        })
+        console.log(mapped);
+
+     </script>
+</body>
+</html>

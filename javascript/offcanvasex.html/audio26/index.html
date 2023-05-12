@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css" class="src">
+    
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm bg-warning justify-content-center">
+            <h2>MEDIA ELEMENTS</h2>  
+        </nav>
+    </header>
+    <main style="background-color:teal; padding-bottom: 10px;padding-left: 28px; padding-top: 20px;">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+              <div class="col">
+            <div class="card" style="width:400px">
+              <img class="card-img-top" src="brahma.jfif" alt="Card image" style="width:100%">
+              <div class="card-body">
+                <h4 class="card-title">Brahmastra-Kesariya</h4>
+                <p class="card-text"  ><audio id="myaudio1">
+                    <source src="kesariya.mp3" type="audio/ogg"  >
+                    
+                  Your browser does not support the audio element.
+                  </audio></p>
+                  <button onclick="play1()" type="button">Play audio</button>
+                  <button onclick="pause1()" type="button">Pause audio</button</p>
+                 
+                
+              </div>
+            </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width:400px">
+                  <img class="card-img-top" src="sitaramam.webp" alt="Card image" style="width:100%">
+                  <div class="card-body">
+                    <h4 class="card-title">Sita Ramam-oh sita</h4>
+                    <p class="card-text"><audio id="myaudio2" >
+                        <source src="ohsita.mp3" type="audio/ogg">
+                        
+                      Your browser does not support the audio element.
+                      </audio></p>
+                      <button onclick="play2()" type="button">Play audio</button>
+                      <button onclick="pause2()" type="button">Pause audio</button</p>
+                 
+                </div>
+              </div>
+              </div>
+              <div class="col">
+                <div class="card" style="width:400px">
+                  <img class="card-img-top" src="karthi.jpg" alt="Card image" style="width:100%">
+                  <div class="card-body">
+                    <h4 class="card-title">Karthikeya-Saripovu</h4>
+                    <p class="card-text"><audio id="myaudio3">
+                        <source src="Saripovu.mp3" type="audio/ogg">
+                        
+                      Your browser does not support the audio element.
+                      </audio></p>
+                      <button onclick="play3()" type="button">Play audio</button>
+                      <button onclick="pause3()" type="button">Pause audio</button</p>
+                 
+                </div>
+              </div>
+              </div>
+            </div>
+                
+            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+              <div class="col">
+            <div class="card" style="width:400px">
+              <img class="card-img-top" src="brahma.jfif" alt="Card image" style="width:100%">
+              <div class="card-body">
+                <h4 class="card-title">Brahmastra-Deva</h4>
+                <p class="card-text"><audio id="myaudio4">
+                    <source src="deva.mp3" type="audio/ogg">
+                    
+                  Your browser does not support the audio element.
+                  </audio></p>
+                  <button onclick="play4()" type="button">Play audio</button>
+                  <button onclick="pause4()" type="button">Pause audio</button</p>
+              </div>
+            </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width:400px">
+                  <img class="card-img-top" src="sitaramam.webp" alt="Card image" style="width:100%">
+                  <div class="card-body">
+                    <h4 class="card-title">Sita Ramam-Intha</h4>
+                    <p class="card-text"><audio id="myaudio5">
+                        <source src="Inthandham.mp3" type="audio/ogg">
+                        
+                      Your browser does not support the audio element.
+                      </audio></p>
+                      <button onclick="play5()" type="button">Play audio</button>
+                      <button onclick="pause5()" type="button">Pause audio</button</p>
+                 
+                </div>
+              </div>
+              </div>
+              <div class="col">
+                <div class="card" style="width:400px">
+                  <img class="card-img-top" src="karthi.jpg" alt="Card image" style="width:100%">
+                  <div class="card-body">
+                    <h4 class="card-title">Karthikeya-inthalo</h4>
+                    <p class="card-text"><audio id="myaudio6">
+                        <source src="inthalo.mp3" type="audio/ogg">
+                        
+                      Your browser does not support the audio element.
+                      </audio></p>
+                    
+                      <button onclick="play6()" type="button">Play audio</button>
+                      <button onclick="pause6()" type="button">Pause audio</button</p>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+            <script> 
+              var aud1 = document.getElementById("myaudio1"); 
+              
+              function play1() { 
+                aud1.play(); 
+              } 
+              
+              function pause1() { 
+                aud1.pause(); 
+              } 
+              var aud2 = document.getElementById("myaudio2"); 
+              
+              function play2() { 
+                aud2.play(); 
+              } 
+              
+              function pause2() { 
+                aud2.pause(); 
+              }
+               var aud3 = document.getElementById("myaudio3"); 
+              
+              function play3() { 
+                aud3.play(); 
+              } 
+              
+              function pause3() { 
+                aud3.pause(); 
+              } 
+              var aud4 = document.getElementById("myaudio4"); 
+              
+              function play4() { 
+                aud4.play(); 
+              } 
+              
+              function pause4() { 
+                aud4.pause(); 
+              } 
+              var aud5 = document.getElementById("myaudio5"); 
+              
+              function play5() { 
+                aud5.play(); 
+              } 
+              
+              function pause5() { 
+                aud5.pause(); 
+              } 
+              var aud6 = document.getElementById("myaudio6"); 
+              
+              function play6() { 
+                aud6.play(); 
+              } 
+              
+              function pause6() { 
+                aud6.pause(); 
+              } 
+              const tracks = Array.from(document.querySelectorAll('audio'));
+
+              tracks.forEach(function(track) {
+              track.addEventListener('play', (event) => {
+              tracks.forEach(function(track) {
+              if(track !== event.target) 
+              track.pause();
+              event.target.play();
+              
+              })
+              })
+              })
+              </script> 
+</main>
+<footer style="height: 10px;background-color:coral; padding-bottom: 26px; padding-top: 10px;">
+  
+  <p class="text-center text-black">copyright<sup>&copy;</sup> your website 2022</p>
+
+</footer>
+</body>
+</html>

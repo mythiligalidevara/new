@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Promises are used to handle asynchronous operations in JavaScript -->
+    <!--  Promises in JavaScript are objects used to represent the eventual completion or failure of an asynchronous operation
+      "Producing code" is code that can take some time
+
+"Consuming code" is code that must wait for the result
+
+A Promise is a JavaScript object that links producing code and consuming code -->
+
+
+<!-- Promise Syntax
+let myPromise = new Promise(function(myResolve, myReject) {
+// "Producing Code" (May take some time)
+
+  myResolve(); // when successful
+  myReject();  // when error
+});
+
+// "Consuming Code" (Must wait for a fulfilled Promise)
+myPromise.then(
+  function(value) { /* code if successful */ },
+  function(error) { /* code if some error */ }
+); -->
+
+<script>
+
+/*
+===================================================
+var promise = new Promise(function(resolve, reject) { 
+    const x = "hello"; 
+    const y = "hello"
+    if(x === y) { 
+      resolve(); 
+    } else { 
+      reject(); 
+    } 
+  }); 
+      
+  promise. 
+
+      then(function () {           //then() is invoked when a promise is either resolved or rejected.
+          console.log('Success'); 
+      }).                         
+      catch(function () {          //catch() is invoked when a promise is either rejected or some error has occurred in execution
+          console.log('Some error has occurred'); 
+      });
+======================================================
+*/
+      //   .then(function(result){
+//   handle success
+//    }, function(error){
+//    handle error
+//    })
+
+// ============================
+// function fun(){
+// fetch("https://dummyjson.com/products")
+// .then(res=>res.json())
+// .then(item=>console.log(item))
+// }
+// fun();
+//==================================
+
+
+function fun(){
+return new Promise(function(resolve,reject){
+ let a= fetch("https://dummyjson.com/products")
+resolve(a)
+reject()
+})}
+
+fun().then(res=>res.json())
+.then(item=>console.log(item.products))
+.catch(err=>err.message)
+</script>
+</body>
+</html>
+
+
+
+
+<!-- Promises in JavaScript are objects used to represent the eventual completion or failure of an asynchronous operation. 
+They allow you to write asynchronous code in a more synchronous fashion by representing a value that may be available now, in the future, or never.
+ A Promise can be in one of three states: pending, fulfilled, or rejected.
+
+Example:
+
+const promise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    const success = true;
+    if (success) {
+      resolve('Promise was fulfilled');
+    } else {
+      reject('Promise was rejected');
+    }
+  }, 1000);
+});
+
+promise
+  .then(result => console.log(result))
+  .catch(err => console.log(err));
+
+===========================================================
+Async/Await is a new way of writing asynchronous code in JavaScript. 
+It is built on top of Promises and can be used to write cleaner, more readable asynchronous code.
+ Async/Await allows you to write asynchronous code as if it were synchronous, but without blocking the main thread.
+
+Example:
+
+async function asyncFunc() {
+  try {
+    const result = await promise;
+    console.log(result);
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+asyncFunc();
+
+// Promise was fulfilled -->

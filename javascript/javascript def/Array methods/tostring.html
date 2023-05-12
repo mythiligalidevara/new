@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>toString() converts an array to a string of (comma separated) array values</p>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+<script>
+const text = ["hello","world"];
+document.getElementById("demo").innerHTML = text.toString();
+
+//The join() method also joins all array elements into a string.
+document.getElementById("demo1").innerHTML = text.join(" * ");
+</script>
+</body>
+</html>

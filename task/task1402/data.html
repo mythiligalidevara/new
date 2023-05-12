@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="fetc.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- <div style="text-align: center;">
+    <input type="text"  placeholder="Search for an item">
+    <input type="submit" value="submit" onclick="searched()">
+  </div> -->
+  <div style="text-align: right; padding-bottom: 10px;">
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for Title.." title="Type in a name" >
+    <button onclick="sortTable()">Sort Products(a-z)</button>
+    <button onclick="sortTable1()">Sort Products(z-a)</button>
+  </div>
+  <div class="container-fluid">
+    
+    <table class="table "  id="myTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Description</th>
+          <th>Price</th>
+          <th>Discount percentage</th>
+          <th>Rating</th>
+          <th>Stock</th>
+          <th>Brand</th>
+          <th>Category</th>
+          <th>Thumbnail</th>
+          <!-- <th>Images</th> -->
+        </tr>
+      </thead>
+      <tbody id="data">
+
+      </tbody>
+
+    </table>
+  </div>
+  <script src="fet.js"></script>
+</body>
+
+</html>

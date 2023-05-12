@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+class Person{
+constructor(name,age){
+    this.name=name;
+    this.age=age;
+}
+fun() {
+    return this.name
+}
+}
+
+class Person1 extends Person{
+    constructor(name,lname){
+        super(name);
+        this.lname=lname;
+    }
+    fun1(){
+        return this.name+this.lname
+    }
+}
+
+const obj=new Person1("mythili","g")
+let x=obj.fun1();
+console.log(x);
+</script>    
+
+
+</body>
+</html>

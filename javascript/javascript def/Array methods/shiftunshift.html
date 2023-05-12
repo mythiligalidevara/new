@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>The shift() method removes the first array element and "shifts" all other elements to a lower index</p>
+    <p>The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements</p>
+    <p id="demo1"></p>
+<p id="demo2"></p>
+
+<script>
+const txt=["a","b","c"];
+txt.shift();
+document.getElementById("demo1").innerHTML = txt;
+txt.unshift("d")
+document.getElementById("demo2").innerHTML = txt;
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a={}
+        a.__proto__={name:"mythili"}
+        console.log(a);   //{}  ->[[prototype]]:object  name:mythili
+        console.log(a.name);  //mythili
+        console.log(Object.prototype);
+        console.log(a.__proto__);   //{name: 'mythili'}
+        console.log(a.__proto__.__proto__);   //{constructor: ƒ, __defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, …}
+        console.log(a.__proto__.__proto__==Object.prototype);  //true
+
+
+        let b=["a","b","c"]
+        console.log(Object.getPrototypeOf(b));    //object
+        console.log(b.__proto__==Array.prototype);  //true
+        console.log(b.__proto__==Object.prototype);  //false
+        console.log(b.__proto__.__proto__===Object.prototype);  //true
+        console.log(Object.prototype.__proto__);   //null as object.prototype is the last link in chain
+    </script>
+</body>
+</html>
+
+

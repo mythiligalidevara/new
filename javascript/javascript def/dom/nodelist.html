@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+</head>
+<body>
+<div class="class1">
+    <div class="class2">
+        <div data-example="hi">
+
+        </div> 
+    </div>
+</div>
+<div class="class1">
+    <div class="class2">
+        <div data-example="hi">
+
+        </div> 
+    </div>
+</div>
+
+
+<script>
+    var list = document.querySelectorAll('div');
+console.log(list[list.length - 1].getAttribute('data-example'));
+</script>
+
+
+
+</body>
+</html>

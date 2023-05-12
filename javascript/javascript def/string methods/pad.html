@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+<script>
+    //padstart
+let text = "5";
+document.getElementById("demo").innerHTML = text.padStart(4,"x");
+//To pad a number, convert the number to a string first.
+let numb = 6;
+let text1 = numb.toString();
+document.getElementById("demo1").innerHTML = text1.padStart(4,0);
+//padend
+document.getElementById("demo2").innerHTML = text.padEnd(4,"x");
+//charAt
+var txt = "HELLO WORLD";
+document.getElementById("demo3").innerHTML = txt.charAt(0);
+</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+"Callback hell" is a term used to describe the situation where a JavaScript codebase becomes difficult to read and maintain due to the excessive use of nested callbacks. This can happen when dealing with asynchronous operations that depend on each other, such as making a series of HTTP requests that need to be executed in a specific order.
+
+When multiple callbacks are nested inside one another, the code can become difficult to read and reason about. This is because the code is executing in a non-linear fashion, making it harder to follow the flow of execution.
+
+Here's an example of what callback hell might look like:
+
+javascript
+Copy code
+asyncOperation1(function(result1) {
+  asyncOperation2(result1, function(result2) {
+    asyncOperation3(result2, function(result3) {
+      asyncOperation4(result3, function(result4) {
+        // And so on...
+      });
+    });
+  });
+});
+As you can see, the code becomes increasingly indented and hard to follow as more callbacks are nested inside one another. This can make the code difficult to maintain and debug, and can lead to bugs and errors.
+
+To avoid callback hell, there are several techniques that can be used. One approach is to use Promises, which provide a more readable and concise way to handle asynchronous operations. Another approach is to use the async/await syntax, which makes it possible to write asynchronous code that looks and feels like synchronous code.
+
+Here's an example of how the code above might look using Promises:
+
+javascript
+Copy code
+asyncOperation1()
+  .then(result1 => asyncOperation2(result1))
+  .then(result2 => asyncOperation3(result2))
+  .then(result3 => asyncOperation4(result3))
+  .then(result4 => {
+    // And so on...
+  })
+  .catch(error => {
+    // Handle errors here...
+  });
+As you can see, this code is much more readable and easier to reason about than the original nested callback code. By using Promises or async/await, you can avoid the pitfalls of callback hell and write code that is easier to read, maintain, and debug.
+
+
+another exaqmple:
+hell:
+getUserData(function(user) {
+    getFriends(user.id, function(friends) {
+        getFriendStatus(friends[0].id, function(status) {
+            displayData(user, friends, status);
+        });
+    });
+});
+
+
+promises:
+getUserData()
+  .then(function(user) {
+    return getFriends(user.id);
+  })
+  .then(function(friends) {
+    return getFriendStatus(friends[0].id);
+  })
+  .then(function(status) {
+    displayData(user, friends, status);
+  })
+  .catch(function(error) {
+    console.error(error);
+  });
+
+

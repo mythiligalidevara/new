@@ -1,0 +1,35 @@
+1)download mongodb and unzip
+https://www.mongodb.com/try/download/community
+2)use these cmds
+C:\>md data
+C:\md data\db
+C:\Users\XYZ>d:cd C:\Program Files\MongoDB\Server\4.2\bin
+C:\Program Files\MongoDB\Server\4.2\bin>mongod.exe --dbpath "C:\data" 
+3)install mongosh
+https://www.mongodb.com/try/download/shell
+4)mongosh.exe
+5)commands:-
+use db
+ db.createCollection("posts")
+show dbs
+db.posts.find()
+===========
+test> use persons
+persons> db
+persons
+persons> db.createCollection("personlist")
+{ ok: 1 }
+persons> db.personlist.find()
+
+6)download compass for gui
+https://www.mongodb.com/try/download/compass
+
+
+7)compass
+uri in connect:mongodb://localhost:27017
+to connect with atlas,go to atlas,in connect tab,go to compass and copy the connection string.replace password
+
+8)to connect atlas from shell,sampe process as above but go to shell and copy the string
+mongosh "mongodb+srv://atlascluster.roimqdb.mongodb.net/myFirstDatabase" --apiVersion 1 --username Mythili
+
+replace the database name and after giving enter it asks for password

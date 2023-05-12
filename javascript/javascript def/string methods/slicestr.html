@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- slice(start, end)
+         substring(start, end)
+         substr(start, length)
+
+    **slice() extracts a part of a string and returns the extracted part in a new string. -->
+    <p>The sliced (extracted) part of the string is:</p>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+
+    let text = "Apple, Banana, Kiwi";
+    let part = text.slice(7,13);   //end not included
+    document.getElementById("demo").innerHTML = part; 
+
+    // let part1 = text.slice(7);     //If you omit the second parameter, the method will slice out the rest of the string
+    // document.getElementById("demo").innerHTML = part; 
+
+    // If a parameter is negative, the position is counted from the end of the string:
+    // let text = "Apple, Banana, Kiwi";
+    // let part = text.slice(-12);
+    // document.getElementById("demo").innerHTML = part;
+
+    //**substring(): start and end values less than 0 are treated as 0 in substring()
+    let str = "Apple, Banana, Kiwi";
+    document.getElementById("demo1").innerHTML = str.substring(7,13);
+
+
+    //**substr():the second parameter specifies the length of the extracted part.
+    let str1 = "Apple, Banana, Kiwi";
+    let part1 = str1.substr(7, 6);
+    document.getElementById("demo2").innerHTML=part1;
+    let part2 = str.substr(-4); //If the first parameter is negative, the position counts from the end of the string.
+    
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

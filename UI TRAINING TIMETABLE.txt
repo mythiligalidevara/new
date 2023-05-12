@@ -1,0 +1,41 @@
+66 days
+FIRST 3 DAYS:COMMON STUFF
+week 1:HTML,DOM
+HTML attributes,tags,styles,images,tables,lists,classes,html5 forms,semantics(building blcks),forms,graphics,media,api s
+
+WEEK2-CSs3,scss
+fonts,styles,bg,images,inline css,external css
+
+week3-bootstrap
+containers,grids,forms,
+
+week-4:ui/ux scfript
+operators,arrow functions,data types,functions,asynchronus,call back functions,operators
+
+week-5:type script
+classses,objects,types,modules,typeof,keyof,container types,template
+
+week4:api
+httpget,post,put delete,actions,json,xml,postman
+
+week5:database
+
+week5:material ui
+checkbox,button,grids,inline functionalities,tables,search,
+
+week5:reactjs
+create component,design html ui,submit form,hooks,form valiations,jl components
+
+week6:angular js/angular
+components,onj,forms,
+
+week7:Node js
+compile
+
+week7:express js,next js,just js
+
+week9:servers web and app
+
+week 9:unit testing
+architecture patterns
+

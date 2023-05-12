@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <p>The replace() method replaces a specified value with another value in a string</p>
+    <p id="demo" ></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        let text="good morning.good morning"
+        document.getElementById("demo").innerHTML =text.replace("morning","afternoon")
+        // The replace() method returns a new string.
+
+        // The replace() method replaces only the first match
+
+        // If you want to replace all matches, use a regular expression with the /g flag set
+
+        document.getElementById("demo1").innerHTML =text.replace(/morning/g,"afternoon")
+
+        //The replaceAll() method:replace all instances of a string; allows you to specify a regular expression instead of a string to be replaced.
+
+        // If the parameter is a regular expression, the global flag (g) must be set set, otherwise a TypeError is thrown.
+        let text1 = "I love Cats. Cats are very easy to love. Cats are very popular."
+        text1 = text1.replaceAll("Cats","Dogs");
+        document.getElementById("demo2").innerHTML = text1;
+    </script>
+</body>
+</html>

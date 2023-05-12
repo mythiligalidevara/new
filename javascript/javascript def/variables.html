@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--VAR-->
+    <p>***var declarations are globally scoped or function/locally scoped***</p>
+    <p id="demo"></p>
+    <script>
+    
+    var tester = "hey hi";
+    
+    function newFunction() {
+        var hello = "hello";
+    }
+    console.log(hello); // error: hello is not defined 
+
+    
+    var greeter = "hey hi";
+    greeter = "say Hello instead";
+    document.getElementById("demo").innerHTML=greeter;
+    </script>
+    <p>***var variables can be re-declared and updated***</p>
+
+
+
+    <!--Let-->
+    <!--<p>let is block scoped</p>
+    <script>
+        let greeting = "say Hi";
+        let times = 4;
+        if (times > 3) {
+            let hello = "say Hello instead";
+            console.log(hello);// "say Hello instead"
+        }
+        console.log(hello) // hello is not defined
+
+    //let can be updated but not re-declared
+        let greeting1 = "say Hi";
+        let greeting1 = "say Hello instead"; // error: Identifier 'greeting' has already been declared
+
+    //let can be updated within its scope
+        let greet = "say Hi";
+        greet = "say Hello instead";
+
+    //if the same variable is defined in different scopes, there will be no error:
+
+        let greeting2 = "say Hi";
+        if (true) {
+            let greeting2 = "say Hello instead";
+            console.log(greeting2); // "say Hello instead"
+        }
+        console.log(greeting2); // "say Hi"
+    </script>
+    -->
+
+
+    <!--const-->
+    
+    <!--<script>
+        //const declarations are block scoped
+        //const cannot be updated or re-declared
+        const greeting = "say Hi";
+        greeting = "say Hello instead";// error: Assignment to constant variable.
+
+        const greeting1 = "say Hi";
+        const greeting1 = "say Hello instead";// error: Identifier 'greeting' has already been declared
+
+        //While a const object cannot be updated, the properties of this objects can be updated.
+        const greet = {
+        message: "say Hi",
+        times: 4
+        }
+        greeting.message = "say Hello instead";
+    </script>-->
+
+
+    <!--var declarations are globally scoped or function scoped while let and const are block scoped.
+var variables can be updated and re-declared within its scope; let variables can be updated but not re-declared; 
+ const variables can neither be updated nor re-declared.
+Var: You can use the variable before it is declared.
+Using a const variable before it is declared will result in a ReferenceError
+Using a let variable before it is declared will result in a ReferenceError-->
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>The ... operator expands an iterable (like an array) into more elements:</p>
+    <!-- The Spread operator allows an iterable to expand in places where 0+ arguments are expected. -->
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+         let arr = [1,2,3];
+    let arr2 = [4,5];  
+    arr3 = [...arr,...arr2];
+    document.getElementById("demo").innerHTML=arr3
+   
+    //another example
+    const numbers = [23,55,21,87,56];
+    let maxValue = Math.max(...numbers);
+
+    document.getElementById("demo1").innerHTML = maxValue; 
+    </script>
+</body>
+</html>
+
+
+

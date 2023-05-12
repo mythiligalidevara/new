@@ -1,0 +1,3 @@
+mongodb+srv://Mythili:Mythili@28@atlascluster.roimqdb.mongodb.net/ecommerce?retryWrites=true&w=majority
+
+pwd for mongo:VQ8At8CpjvY7xXox

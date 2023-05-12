@@ -1,0 +1,35 @@
+21/03/2023:
+In Angular todo project,printed the content of table 
+In Angular todo project,added an option to download table in excel format 
+in Id card,adjusted the layout according to the requirements
+
+23/03/2023:
+Practised Angular Tour of heroes as mentioned in Angular official documentation
+Practiced few angular concepts like Decorators,Directives,Template driven forms,Reactive forms
+
+24/03/2023:
+Read the concept of JSON web token from official document
+created backend to implement JWT
+
+27/03/2023:
+
+Practiced angular concepts: lifecycle methods,view child,different types of decorators,read about angular flow,data binding,protected routes
+
+28/03/2023:
+
+Express,fetch,axios
+
+29/03/2023:
+java script
+
+30/03/2023:
+java script,react
+
+31/03/2023:
+react-redux,hooks-usestate,useeffect,usememo,useref,usecontext,usereducer,customhooks
+
+
+
+
+
+

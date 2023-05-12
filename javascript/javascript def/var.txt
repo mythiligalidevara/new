@@ -1,0 +1,41 @@
+Hoisting of var Variable
+
+When we declare a var variable, it gets hoisted to the top of the scope and gets assigned the value of undefined. 
+Let's take an example to understand it -
+
+console.log(myName); //output => undefined 
+var myName = "my name";
+In the example above, we are trying to access the variable myName before the declaration.
+
+Here is what it will look like when the variable myName gets hoisted to the top of the scope -
+
+var myName;
+console.log(myName); //output => undefined 
+myName = "my name";
+We can see here our variable gets hoisted to the top of the scope and initialized with undefined, but the initialization of the value happens 
+where the variable was declared.
+
+If we talk about only hoisting, it's a feature provided by javascript which moves variables and functions to the top of scope 
+before code execution; It also happens when we make a function declaration.
+
+Example of a function declaration:
+
+myFun() //output => "my name"
+function myFun() {
+    var myName = "my name";
+    console.log(myName);
+}
+In the example above, we are calling the function before the declaration, but still, it calls the function successfully.
+
+Our example code will look like this after getting moved to the top:
+
+function myFun() {
+    var myName = "my name";
+    console.log(myName);
+}
+myFun() //output => "my name"
+\
+
+
+Git Fetch is the command that tells the local repository that there are changes available in the remote repository without bringing the changes into the local repository.
+ Git Pull on the other hand brings the copy of the remote directory changes into the local repository. 

@@ -1,0 +1,63 @@
+
+import React from "react";
+import { useState } from "react";
+
+function ImageUpload(){
+
+    const [file,setFile]=useState(null)
+    const [source,setSource]=useState("")
+    function handleChange(e){
+        setFile(e.target.files[0])
+    }
+
+    async function handleSubmit(e){
+        e.preventDefault();
+        imagefun();
+        const reader=new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload=async ()=>{
+            var imageData=reader.result;
+            console.log(imageData);
+            const response=await fetch("http://localhost:5001/image",{
+                method:"POST",
+                body:JSON.stringify({imageData}),
+                headers:{
+                    "Content-Type":"application/json",
+                }
+            })
+            try{
+                if(response){
+                    console.log(response) ;
+                }
+                
+            }
+            catch(err){
+                console.log(err);
+            }
+        }
+    }
+
+   async function imagefun(){
+   const res=await fetch("http://localhost:5001/image")
+  // console.log(await res.json(res));
+    const source1=await res.json(res)
+    console.log(source1);
+    //return source1;
+    setSource(source1)
+    // fetch("http://localhost:5001/image")
+    // .then(res=>res.json())
+    // .then()
+   }
+    
+    return(
+       <form onSubmit={handleSubmit}>
+        <input type="file" onChange={handleChange}></input><br></br>
+        <button type="submit">Upload</button><br></br>
+        <img src={source} alt="no img"/>  
+         {/* {imagefun()} */}
+       </form>
+
+    )
+}
+
+export default ImageUpload;

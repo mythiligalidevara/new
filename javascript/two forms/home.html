@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .signup,.login{
+        color:white;
+        padding: 150px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      body{
+        text-align: center;
+        width: 100%;
+        height: auto;
+        background-size: 100% 100%;
+        background-size:cover; 
+        height: 100vh;
+      }
+@media only screen and (max-width: 600px) {
+  body {background-image: url('reg.webp');}
+}
+
+
+@media only screen and (min-width: 600px) {
+  body{background-image: url('p1.jpg');}
+}
+
+
+@media only screen and (min-width: 768px) {
+  body{background-image: url('p2.jpg');}
+} 
+
+
+@media only screen and (min-width: 992px) {
+  body{background-image: url('p3.jpg');}
+} 
+
+@media only screen and (min-width: 1200px) {
+  body{background-image: url('p4.jpg');}
+}
+      </style>
+</head>
+<body>
+  <main>
+    <form class="signup" >
+        <fieldset>
+            <legend>SIGN UP:</legend>
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+        <label for="gender">Gender:</label>
+        <input type="radio" name="gender" id="male" value="male">
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female" value="female">
+        <label for="female">Female</label><br><br>
+        <label for="city">Choose a city:</label><br><br>
+        <select id="city" name="city">
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Rajahmundry">Rajahmundry</option>
+            <option value="Bangalore">Bangalore</option>
+        </select><br><br>
+        <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+    <form class="login">
+        <fieldset>
+            <legend>Login:</legend>
+        <label for="uname">Enter username:</label>
+        <input type="text" id="fname" name="fname"><br><br>
+        <label for="pwd">Enter password</label>
+        <input type="password" id="pwd" name="pwd"><br><br>
+        <input type="submit" value="Login">
+        </fieldset>
+    </form>
+  </main>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<script>
+// for- loops through a block of code a number of times
+let text = "";
+for (let i = 0; i < 5; i++) {
+  text+= "The number is " + i + "<br>";
+}
+document.getElementById("demo").innerHTML = text;
+
+let arr = ['el1', 'el2', 'el3'];
+
+// arr.addedProp = 'arrProp';
+
+// elKey are the property keys
+for (let elKey in arr) {
+  console.log(elKey);
+}
+
+// elValue are the property values
+for (let elValue of arr) {
+  console.log(elValue)
+}
+
+// // forin- loops through the properties of an object
+// const person = {fname:"John", lname:"Doe", age:25}; 
+// let txt = "";
+// for (let x in person) {
+//   txt += person[x] + " ";
+// }
+// document.getElementById("demo1").innerHTML = txt;
+//          //on array
+// const numbers = [45, 4, 9, 16, 25];
+// let txt1 = "";
+// for (let x in numbers) {
+//   txt1 += numbers[x] + "<br>"; 
+// }
+// document.getElementById("demo").innerHTML = txt1;
+
+// //forof- loops through the values of an iterable object
+// const cars = ["BMW", "Volvo", "Mini"];
+
+// let text1 = "";
+// for (let x of cars) {
+//   text1 += x + "<br>";
+// }
+
+// document.getElementById("demo2").innerHTML = text1;
+
+
+
+
+</script>
+</body>
+</html>

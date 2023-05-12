@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- The filter() method creates a new array with array elements that pass a test.   -->
+<!-- The filter() method does not execute the function for empty elements.
+The filter() method does not change the original array -->
+<!-- Return an array of all values in ages[] that are 18 or over -->
+
+<p id="demo"></p>
+
+<script>
+const ages = [32, 33, 16, 40];
+
+document.getElementById("demo").innerHTML = ages.filter(checkAdult);
+
+function checkAdult(age) {
+  return age >= 18;
+}
+
+
+
+</script>
+</body>
+</html>
